@@ -9,6 +9,14 @@
   --color-page: #e5e5e5;
   --color-btn-active: #404bbf;
 
+  /* padding */
+  --gap-24: 24px;
+  --gap-48: 48px;
+
+  /* shadow */
+  --shadow-main: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+
   /* font */
   --font-main: 'Roboto', sans-serif;
   --font-secondary: 'Raleway', sans-serif;
@@ -134,8 +142,8 @@ ul {
 .header {
   background-color: var(--color-background);
 
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-bottom: 2px solid var(--color-section);
+  box-shadow: var(--shadow-main);
 }
 
 .header-container,
@@ -146,8 +154,8 @@ ul {
 }
 
 .header-container {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: var(--gap-24);
+  padding-bottom: var(--gap-24);
 }
 
 .header-logo {
@@ -199,8 +207,15 @@ ul {
 
 /* ---------- HERO SECTION ---------- */
 .hero {
-  text-align: center;
   background-color: var(--color-main);
+}
+
+.hero-container {
+  display: flex;
+  padding-top: 192px;
+  padding-bottom: 192px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-title {
@@ -239,8 +254,7 @@ ul {
 
 .btn:hover,
 .btn:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: var(--shadow-main);
 }
 
 .btn:active {
@@ -257,13 +271,13 @@ ul {
 
 .about-list {
   display: flex;
-  margin-left: -24px;
+  margin-left: calc(-1 * var(--gap-24));
   flex-wrap: wrap;
 }
 
 .about-list-item {
-  flex-basis: calc(100% / 4 - 24px);
-  margin-left: 24px;
+  flex-basis: calc(100% / 4 - var(--gap-24));
+  margin-left: var(--gap-24);
 }
 /* ---------- /ABOUT SECTION ---------- */
 
@@ -274,15 +288,15 @@ ul {
 
 .direction-list {
   display: flex;
-  margin-left: -24px;
-  margin-top: -24px;
+  margin-left: calc(-1 * var(--gap-24));
+  margin-top: calc(-1 * var(--gap-24));
   flex-wrap: wrap;
 }
 
 .direction-item {
-  flex-basis: calc(100% / 3 - 24px);
-  margin-left: 24px;
-  margin-top: 24px;
+  flex-basis: calc(100% / 3 - var(--gap-24));
+  margin-left: var(--gap-24);
+  margin-top: var(--gap-24);
 
   background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
   background-blend-mode: soft-light, normal;
@@ -303,21 +317,23 @@ ul {
 
 .team-list {
   display: flex;
-  margin-left: -24px;
-  margin-top: -24px;
   flex-wrap: wrap;
+
+  /* variant 1 - use negative margin  */
+  margin-left: calc(-1 * var(--gap-24));
+  margin-top: calc(-1 * var(--gap-24));
 
   text-align: center;
 }
 
 .team-list-item {
-  flex-basis: calc(100% / 4 - 24px);
-  margin-left: 24px;
-  margin-top: 24px;
+  /* variant 1 - use negative margin  */
+  flex-basis: calc(100% / 4 - var(--gap-24));
+  margin-left: var(--gap-24);
+  margin-top: var(--gap-24);
 
   background-color: var(--color-background);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: var(--shadow-main);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -369,13 +385,8 @@ ul {
   background-color: var(--color-background);
   padding-top: 96px;
 }
-/* filter buttons */
-.filter-list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 72px;
-}
 
+/* filter buttons */
 .filter-btn {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -397,8 +408,17 @@ ul {
   cursor: pointer;
 }
 
+.portfolio-container {
+  margin-bottom: 72px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+}
+
 .filter-list-item:not(:last-child) {
-  margin-right: 24px;
+  margin-right: var(--gap-24);
 }
 
 .filter-btn:hover,
@@ -416,14 +436,10 @@ ul {
 .examples-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -48px;
-  margin-left: -24px;
-}
 
-.examples-list-item {
-  flex-basis: calc(100% / 3 - 24px);
-  margin-top: 48px;
-  margin-left: 24px;
+  /* variant 2 - use gap  */
+  row-gap: var(--gap-48);
+  column-gap: var(--gap-24);
 }
 
 .examples-list-item > img {
@@ -435,6 +451,10 @@ ul {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
+  padding-right: 16px;
+
+  max-width: 360px;
+  max-height: 120px;
 
   border-left: 0.5px solid var(--color-section);
   border-right: 0.5px solid var(--color-section);
