@@ -134,7 +134,6 @@ ul {
 .header {
   background-color: var(--color-background);
 
-  border-bottom: 0.5px solid var(--color-section);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -284,15 +283,15 @@ ul {
   flex-basis: calc(100% / 3 - 24px);
   margin-left: 24px;
   margin-top: 24px;
+
+  background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
+  background-blend-mode: soft-light, normal;
+  border: 1px solid var(--color-border);
 }
 
 .direction-item > img {
   display: block;
-
-  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-  background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
-  background-blend-mode: soft-light, normal;
-  border: 1px solid var(--color-border);
+  max-width: 100%;
 }
 
 /* ---------- /WHAT ARE ... SECTION ---------- */
@@ -324,6 +323,7 @@ ul {
 
 .team-list-item > img {
   display: block;
+  max-width: 100%;
 }
 
 .team-text {
@@ -428,6 +428,7 @@ ul {
 
 .examples-list-item > img {
   display: block;
+  max-width: 100%;
 }
 
 .examples-text {
