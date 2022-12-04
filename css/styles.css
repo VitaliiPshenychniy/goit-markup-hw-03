@@ -5,7 +5,9 @@
   --color-section: #f4f4fd;
   --color-accent: #4d5ae5;
   --color-border: #e7e9fc;
-  --color-background: #f5f5f5;
+  --color-background: #ffffff;
+  --color-page: #e5e5e5;
+  --color-btn-active: #404bbf;
 
   /* font */
   --font-main: 'Roboto', sans-serif;
@@ -18,7 +20,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--color-main);
 
-  background-color: var(--color-background);
+  background-color: var(--color-page);
 }
 
 /* ---------- DROPPING THE STYLES
@@ -130,10 +132,11 @@ ul {
 
 /* ---------- HEADER ---------- */
 .header {
-  background-color: #ffffff;
+  background-color: var(--color-background);
 
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 1px 6px rgba(46, 47, 66, 0.08);
+  border-bottom: 0.5px solid var(--color-section);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .header-container,
@@ -172,6 +175,10 @@ ul {
   color: var(--color-secondary);
 }
 
+.header-link:active {
+  color: var(--color-accent);
+}
+
 .header-contacts {
   margin-left: auto;
 }
@@ -206,7 +213,7 @@ ul {
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
-  color: #ffffff;
+  color: var(--color-background);
 }
 
 .btn {
@@ -221,7 +228,7 @@ ul {
   line-height: 1.18;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--color-background);
 
   background-color: var(--color-accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -235,6 +242,11 @@ ul {
 .btn:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.btn:active {
+  background-color: var(--color-btn-active);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* ---------- /HERO SECTION ---------- */
 
@@ -272,15 +284,15 @@ ul {
   flex-basis: calc(100% / 3 - 24px);
   margin-left: 24px;
   margin-top: 24px;
-  max-width: 360px;
-
-  background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
-  background-blend-mode: soft-light, normal;
-  border: 1px solid var(--color-border);
 }
 
 .direction-item > img {
   display: block;
+
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
+  background-blend-mode: soft-light, normal;
+  border: 1px solid var(--color-border);
 }
 
 /* ---------- /WHAT ARE ... SECTION ---------- */
@@ -304,10 +316,14 @@ ul {
   margin-left: 24px;
   margin-top: 24px;
 
-  background: #ffffff;
+  background-color: var(--color-background);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-item > img {
+  display: block;
 }
 
 .team-text {
@@ -408,7 +424,6 @@ ul {
   flex-basis: calc(100% / 3 - 24px);
   margin-top: 48px;
   margin-left: 24px;
-  max-width: 360px;
 }
 
 .examples-list-item > img {
@@ -420,7 +435,9 @@ ul {
   padding-bottom: 32px;
   padding-left: 16px;
 
-  border: 0.5px solid #f4f4fd;
+  border-left: 0.5px solid var(--color-section);
+  border-right: 0.5px solid var(--color-section);
+  border-bottom: 0.5px solid var(--color-section);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 /* ---------- /PORTFOLIO ---------- */
