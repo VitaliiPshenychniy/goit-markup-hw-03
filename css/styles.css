@@ -9,7 +9,7 @@
   --color-page: #e5e5e5;
   --color-btn-active: #404bbf;
 
-  /* padding */
+  /* gaps */
   --gap-24: 24px;
   --gap-48: 48px;
 
@@ -22,7 +22,7 @@
   --font-secondary: 'Raleway', sans-serif;
 }
 
-/* GLOBAL STYLE */
+/* ---------- GLOBAL STYLE ---------- */
 body {
   font-family: var(--font-main);
   letter-spacing: 0.02em;
@@ -30,21 +30,18 @@ body {
 
   background-color: var(--color-page);
 }
+/* ---------- /GLOBAL STYLE ---------- */
 
-/* ---------- DROPPING THE STYLES
- OF BROUSER ---------- */
+/* ---------- DROPPING THE STYLES ---------- */
 
-/* deleted markers */
 .list {
   list-style: none;
 }
 
-/* deleted unerline */
 .link {
   text-decoration: none;
 }
 
-/* deleted margins and paddings */
 h1,
 h2,
 h3,
@@ -58,10 +55,29 @@ ul {
 ul {
   padding-left: 0px;
 }
-/* ---------- /DROPPING THE STYLES
- OF BROUSER ---------- */
+/* ---------- /DROPPING THE STYLES ---------- */
 
 /* ---------- COMPONENTS ---------- */
+
+/* section and container */
+.width-pages {
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* hiden text */
 .hiden {
@@ -76,28 +92,6 @@ ul {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-/* width pages */
-.width-pages {
-  width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* container */
-.container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* section */
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 
 /* logo */
@@ -136,14 +130,21 @@ ul {
   line-height: 1.5;
   color: var(--color-secondary);
 }
+
+/* visibility img */
+.direction-item > img,
+.team-list-item > img,
+.examples-list-item > img {
+  display: block;
+  max-width: 100%;
+}
 /* ---------- /COMPONENTS ---------- */
 
 /* ---------- HEADER ---------- */
 .header {
   background-color: var(--color-background);
 
-  border-bottom: 2px solid var(--color-section);
-  box-shadow: var(--shadow-main);
+  border-bottom: 0.5px solid var(--color-border);
 }
 
 .header-container,
@@ -190,6 +191,10 @@ ul {
   margin-left: auto;
 }
 
+.header-contacts > li:not(:last-child) {
+  margin-right: 40px;
+}
+
 .header-contact {
   line-height: 1.5;
   color: var(--color-secondary);
@@ -198,10 +203,6 @@ ul {
 .header-contact:hover,
 .header-contact:focus {
   color: var(--color-accent);
-}
-
-.header-mail {
-  margin-right: 40px;
 }
 /* ---------- /HEADER ---------- */
 
@@ -265,8 +266,9 @@ ul {
 
 /* ---------- ABOUT SECTION ---------- */
 .about {
-  background-color: var(--color-background);
   padding-bottom: 0;
+
+  background-color: var(--color-background);
 }
 
 .about-list {
@@ -303,11 +305,6 @@ ul {
   border: 1px solid var(--color-border);
 }
 
-.direction-item > img {
-  display: block;
-  max-width: 100%;
-}
-
 /* ---------- /WHAT ARE ... SECTION ---------- */
 
 /* ---------- OUR TEAM SECTION ---------- */
@@ -335,11 +332,6 @@ ul {
   background-color: var(--color-background);
   box-shadow: var(--shadow-main);
   border-radius: 0px 0px 4px 4px;
-}
-
-.team-list-item > img {
-  display: block;
-  max-width: 100%;
 }
 
 .team-text {
@@ -440,11 +432,6 @@ ul {
   /* variant 2 - use gap  */
   row-gap: var(--gap-48);
   column-gap: var(--gap-24);
-}
-
-.examples-list-item > img {
-  display: block;
-  max-width: 100%;
 }
 
 .examples-text {
