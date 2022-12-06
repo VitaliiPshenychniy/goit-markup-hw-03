@@ -60,12 +60,6 @@ ul {
 /* ---------- COMPONENTS ---------- */
 
 /* section and container */
-.width-pages {
-  width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -142,6 +136,9 @@ ul {
 
 /* ---------- HEADER ---------- */
 .header {
+  padding-top: var(--gap-24);
+  padding-bottom: var(--gap-24);
+
   background-color: var(--color-background);
 
   border-bottom: 0.5px solid var(--color-border);
@@ -152,11 +149,6 @@ ul {
 .header-contacts {
   display: flex;
   align-items: center;
-}
-
-.header-container {
-  padding-top: var(--gap-24);
-  padding-bottom: var(--gap-24);
 }
 
 .header-logo {
@@ -208,13 +200,14 @@ ul {
 
 /* ---------- HERO SECTION ---------- */
 .hero {
+  padding-top: 192px;
+  padding-bottom: 192px;
+
   background-color: var(--color-main);
 }
 
 .hero-container {
   display: flex;
-  padding-top: 192px;
-  padding-bottom: 192px;
   flex-direction: column;
   align-items: center;
 }
@@ -346,6 +339,9 @@ ul {
 
 /* ---------- FOOTER ---------- */
 .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
   background-color: var(--color-main);
 }
 
@@ -364,11 +360,6 @@ ul {
 
   line-height: 1.5;
   color: var(--color-border);
-}
-
-.footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 /* ---------- /FOOTER ---------- */
 
@@ -400,13 +391,10 @@ ul {
   cursor: pointer;
 }
 
-.portfolio-container {
-  margin-bottom: 72px;
-}
-
 .filter-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 72px;
 }
 
 .filter-list-item:not(:last-child) {
