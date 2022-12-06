@@ -132,7 +132,7 @@ ul {
 }
 
 /* visibility img */
-.direction-item > img,
+.direction-list-item > img,
 .team-list-item > img,
 .examples-list-item > img {
   display: block;
@@ -295,7 +295,7 @@ ul {
   flex-wrap: wrap;
 }
 
-.direction-item {
+.direction-list-item {
   flex-basis: calc(100% / 3 - var(--gap-24));
   margin-left: var(--gap-24);
   margin-top: var(--gap-24);
